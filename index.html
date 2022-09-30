@@ -43,11 +43,11 @@
                 <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
                     <i class="fa fa-bars"></i>
                 </a>
-                <a href="#home" class="w3-bar-item w3-button">HOME</a>
-                <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-                <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-                <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i></a>
-                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <a href="#home" class="w3-bar-item w3-button w3-text-white" id="homeButton">HOME</a>
+                <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-text-white" id="aboutButton"><i class="fa fa-user"></i> ABOUT</a>
+                <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-text-white" id="portfolioButton"><i class="fa fa-th"></i> PORTFOLIO</a>
+                <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-text-white" id="contactButton"><i class="fa fa-envelope"></i> CONTACT</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red w3-text-white" id="searchButton">
                     <i class="fa fa-search"></i>
                 </a>
             </div>
@@ -70,10 +70,25 @@
             window.onscroll = function() {myFunction()};
             function myFunction() {
                 var navbar = document.getElementById("topNavbar");
+                var home = document.getElementById("homeButton");
+                var about = document.getElementById("aboutButton");
+                var portfolio = document.getElementById("portfolioButton");
+                var contact = document.getElementById("contactButton");
+                var search = document.getElementById("searchButton");
                 if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                     navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+                    home.className = home.className.replace(" w3-text-white", "");
+                    about.className = about.className.replace(" w3-text-white", "");
+                    portfolio.className = portfolio.className.replace(" w3-text-white", "");
+                    contact.className = contact.className.replace(" w3-text-white", "");
+                    search.className = search.className.replace(" w3-text-white", "");
                 } else {
                     navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+                    home.className = "w3-bar-item " + " w3-button" + " w3-hide-small" + " w3-text-white";
+                    about.className = "w3-bar-item " + " w3-button" + " w3-hide-small" + " w3-text-white";
+                    portfolio.className = "w3-bar-item " + " w3-button" + " w3-hide-small" + " w3-text-white";
+                    contact.className = "w3-bar-item " + " w3-button" + " w3-hide-small" + " w3-text-white";
+                    search.className = "w3-bar-item " + " w3-button" + " w3-hide-small" + " w3-right" + " w3-hover-red" + " w3-text-white";
                 }
             }
             function toggleFunction() {
