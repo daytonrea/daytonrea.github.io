@@ -468,6 +468,7 @@ var Game = {
 	_generateRoundColor: function () {
 		var newColor = colors[Math.floor(Math.random() * colors.length)];
 		if (newColor === this.color) return Pong._generateRoundColor();
+        document.body.style.backgroundColor = newColor;
 		return newColor;
 	}
 };
