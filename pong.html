@@ -214,6 +214,9 @@ var Game = {
 		// Change the canvas font size and color
 		this.context.font = '50px Courier New';
 		this.context.fillStyle = this.color;
+		if (document.body.style.backgroundColor !== this.color) {
+			document.body.style.backgroundColor = this.color;
+		}
 
 		// Draw the rectangle behind the 'Press any key to begin' text.
 		this.context.fillRect(
