@@ -1,15 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dayton Rae - Home</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+#fader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  pointer-events: none;
+  background: #17182f;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fade-out {
+    from { opacity: 1 }
+      to { opacity: 0 }
+}
+@keyframes fade-in {
+    from { opacity: 0 }
+      to { opacity: 1 }
+}
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+    body {
+  margin: 0;
+  background-color: #17182f;
+  /*text-align: center; */
+}
+
+canvas {
+  display: block;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
 #fader {
   position: fixed;
   top: 0;
@@ -40,9 +85,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 }
 </style>
 </head>
-<body style="background-color: #121212;">
-  <svg id="fader"></svg>
-  <script>
+<svg id="fader"></svg>
+<script>
     fadeInPage();
     function fadeInPage() {
       if (!window.AnimationEvent) { return; }
@@ -52,9 +96,123 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 
   </script>
-
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+  
+  <div id="particles-js"></div>
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 600,
+      "density": {
+        "enable": true,
+        "value_area": 789.1476416322727
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.48927153781200905,
+      "random": false,
+      "anim": {
+        "enable": true,
+        "speed": 0.2,
+        "opacity_min": 0,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 2,
+        "size_min": 0,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.2,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 83.91608391608392,
+        "size": 1,
+        "duration": 3,
+        "opacity": 1,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+<div class="w3-content w3-margin-top" style="max-width:1400px;" id="home">
 
   <!-- The Grid -->
   <div class="w3-row-padding">
@@ -273,7 +431,7 @@ window.addEventListener('pageshow', function (event) {
 
 // Function that is invoked after the konami code has been entered
 function konamiIsDetected() {
-	window.location.href = "starsTest.html";
+  window.location.href = "index.html";
 }
 </script>
 
@@ -284,8 +442,6 @@ function konamiIsDetected() {
   <a href="https://twitter.com/daytonrea" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
   <a href="https://linkedin.com/in/daytonrea" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
   <p style="margin-bottom: 0;">Made with ❤️ by Dayton Rae</p>
-  <small>v1.6.12</small>
+  <small id="version1">v1.6.12</small>
 </footer>
-
-</body>
 </html>
