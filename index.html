@@ -270,6 +270,13 @@ canvas {
       <div class="w3-container w3-card w3-margin-bottom w3-text-white" style="background-color: #404040;">
         <h2 class="w3-text-light-gray w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-light-gray"></i>Work Experience</h2>
         <div class="w3-container w3-text-white">
+          <h5 class="w3-text-light-gray"><b>Employee Experience Coordinator / Best Buy - Stillwater, OK</b></h5>
+          <h6 class="w3-text-light-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2022 - <span class="w3-tag w3-green w3-round">Current</span></h6>
+          <p>Responsible for planning and coordinating Employee Engagement Events. Works with employees to make sure all needs are met, and all employees are working in a stable, productive environment.
+          </p>
+          <hr>
+        </div>
+        <div class="w3-container w3-text-white">
           <h5 class="w3-text-light-gray"><b>Apple Mobility Certified Advisor / Best Buy - Stillwater, OK</b></h5>
           <h6 class="w3-text-light-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2022 - <span class="w3-tag w3-green w3-round">Current</span></h6>
           <p>Providing full service and solutions support to customers in the areas of Apple Vendor Experience. 
@@ -359,7 +366,7 @@ window.addEventListener('pageshow', function (event) {
   fader.classList.remove('fade-in');
 });
 </script>
-<script>
+<!--<script>
   (function() {
     "use strict";
     // Some key codes that are used
@@ -450,6 +457,106 @@ window.addEventListener('pageshow', function (event) {
 function konamiIsDetected() {
   window.location.href = "index.html";
 }
+</script>
+-->
+
+<script>
+  const konamiCode = [
+  "ArrowUp",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowLeft",
+  "ArrowRight",
+  "b",
+  "a"
+];
+
+let konamiCodePosition = 0;
+
+document.addEventListener("keydown", (event) => {
+  const key = event.key;
+  const requiredKey = konamiCode[konamiCodePosition];
+
+  if (key === requiredKey) {
+    konamiCodePosition++;
+
+    if (konamiCodePosition === konamiCode.length) {
+      startConfetti();
+      konamiCodePosition = 0;
+    }
+  } else {
+    konamiCodePosition = 0;
+  }
+});
+
+function startConfetti() {
+  const canvas = document.createElement("canvas");
+  canvas.id = "confetti-canvas";
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  canvas.style.position = "fixed";
+  canvas.style.top = "0";
+  canvas.style.left = "0";
+  canvas.style.pointerEvents = "none";
+  document.body.appendChild(canvas);
+
+  const context = canvas.getContext("2d");
+
+  let confetti = [];
+
+  function createConfetti() {
+    confetti.push({
+      x: Math.random() * canvas.width,
+      y: -10,
+      color: `rgb(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255})`,
+      width: Math.random() * 20 + 10,
+      height: Math.random() * 20 + 10,
+      velocity: {
+        x: Math.random() * 6 - 3,
+        y: Math.random() * 3 + 2
+      }
+    });
+  }
+
+  function updateConfetti() {
+    confetti.forEach((piece, index) => {
+      piece.x += piece.velocity.x;
+      piece.y += piece.velocity.y;
+      piece.velocity.y += 0.1;
+
+      if (piece.y >= canvas.height) {
+        confetti.splice(index, 1);
+      }
+    });
+  }
+
+  function drawConfetti() {
+    confetti.forEach((piece) => {
+      context.beginPath();
+      context.rect(piece.x, piece.y, piece.width, piece.height);
+      context.fillStyle = piece.color;
+      context.fill();
+    });
+  }
+
+  function loop() {
+    createConfetti();
+    updateConfetti();
+    drawConfetti();
+
+    requestAnimationFrame(loop);
+  }
+
+  loop();
+
+  setTimeout(() => {
+    document.body.removeChild(canvas);
+  }, 5000);
+}
+
 </script>
 
 <footer class="w3-container w3-teal w3-center w3-margin-top">
