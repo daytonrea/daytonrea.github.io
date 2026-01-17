@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Add "Today" Button to Internet Leads
 // @namespace    https://daytonrea.com
-// @version      1.4
+// @version      1.5
 // @description  Adds a "Today" button to the custom report to set both start and end dates to today (midnight to now) and selects Up Type = Internet
 // @match        https://www.eleadcrm.com/evo2/fresh/elead-v45/elead_track/reports/customreport.aspx?id=1829
+// @downloadURL    https://daytonrea.com/placeholder.user.js
 // @updateURL    https://daytonrea.com/placeholder.user.js
 // @grant        none
 // ==/UserScript==
@@ -11,7 +12,7 @@
 
 (function() {
     'use strict';
-
+    //init
     // Utility for date formatting in "MM/DD/YYYY hh:mm:ss a"
     function formatDotNetDate(date) {
         function pad(n) { return n < 10 ? "0" + n : n; }
