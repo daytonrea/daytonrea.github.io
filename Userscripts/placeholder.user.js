@@ -4,8 +4,8 @@
 // @version      1.5
 // @description  Adds a "Today" button to the custom report to set both start and end dates to today (midnight to now) and selects Up Type = Internet
 // @match        https://www.eleadcrm.com/evo2/fresh/elead-v45/elead_track/reports/customreport.aspx?id=1829
-// @downloadURL    https://daytonrea.com/placeholder.user.js
-// @updateURL    https://daytonrea.com/placeholder.user.js
+// @downloadURL  https://daytonrea.com/Userscripts/placeholder.user.js
+// @updateURL    https://daytonrea.com/Userscripts/placeholder.user.js
 // @grant        none
 // ==/UserScript==
 
