@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Add "Today" Button to User Activity Performance
 // @namespace    https://daytonrea.com
-// @version      1.4
+// @version      1.5
 // @description  Adds a "Today" button to the custom report to set both start and end dates to today (midnight to now)
-// @match        https://www.eleadcrm.com/evo2/fresh/elead-v45/elead_track/reports/customReport.aspx?ID=1856
-// @downloadURL    https://daytonrea.com/Userscripts/EleadUAPTodayButton.user.js
+// @match        https://www.eleadcrm.com/evo2/fresh/elead-v45/elead_track/reports/customReport.aspx?ID=*
+// @match        https://www.eleadcrm.com/evo2/fresh/elead-v45/elead_track/reports/customreport.aspx?ID=*
+// @downloadURL  https://daytonrea.com/Userscripts/EleadUAPTodayButton.user.js
 // @updateURL    https://daytonrea.com/Userscripts/EleadUAPTodayButton.user.js
 // @grant        none
 // ==/UserScript==
