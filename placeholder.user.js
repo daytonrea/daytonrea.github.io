@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Add "Today" Button to User Activity Performance
+// @name         Add "Today" Button to Internet Leads
 // @namespace    https://daytonrea.com
 // @version      1.4
 // @description  Adds a "Today" button to the custom report to set both start and end dates to today (midnight to now) and selects Up Type = Internet
