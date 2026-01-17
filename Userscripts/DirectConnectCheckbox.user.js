@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Add Direct Connect Checkbox to Process Activity
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Injects the "Direct Connect" checkbox span right after the span that contains the input with id="eveningnumber" on process_activity.html
 // @match        https://www.eleadcrm.com/evo2/fresh/elead-v45/elead_track/eLeadToday/ProcessTask.asp*
 // @match        https://www.eleadcrm.com/evo2/fresh/elead-v45/elead_track/eleadtoday/processtask.asp?*
