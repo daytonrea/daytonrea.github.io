@@ -8,6 +8,7 @@
 // @downloadURL  https://daytonrea.com/Userscripts/Click2Call.user.js
 // @updateURL    https://daytonrea.com/Userscripts/Click2Call.user.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=eleadcrm.com
+// @match        https://crm.connectcdk.com/evo2/fresh/elead-v45/elead_track/ClickToCall/ProcessCall.aspx?Phone=*
 // @grant        none
 // ==/UserScript==
 
