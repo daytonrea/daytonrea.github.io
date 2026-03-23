@@ -6,6 +6,7 @@
 // @match        https://www.eleadcrm.com/evo2/fresh/elead-v45/elead_track/weblink/templates.asp*
 // @downloadURL  https://daytonrea.com/Userscripts/BlankTemplate.user.js
 // @updateURL    https://daytonrea.com/Userscripts/BlankTemplate.user.js
+// @match        https://crm.connectcdk.com/evo2/fresh/elead-v45/elead_track/weblink/templates.asp*
 // @grant        none
 // ==/UserScript==
 
