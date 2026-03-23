@@ -7,6 +7,8 @@
 // @match        https://www.eleadcrm.com/evo2/fresh/elead-v45/elead_track/reports/customreport.aspx?ID=*
 // @downloadURL  https://daytonrea.com/Userscripts/EleadUAPTodayButton.user.js
 // @updateURL    https://daytonrea.com/Userscripts/EleadUAPTodayButton.user.js
+// @match        https://crm.connectcdk.com/evo2/fresh/elead-v45/elead_track/reports/customreport.aspx?ID=*
+// @match        https://crm.connectcdk.com/evo2/fresh/elead-v45/elead_track/reports/customReport.aspx?ID=*
 // @grant        none
 // ==/UserScript==
 
