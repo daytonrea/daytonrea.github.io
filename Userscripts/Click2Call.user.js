@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ELead CRM Click2Call Autocall
 // @namespace    https://daytonrea.com/
-// @version      1.2
+// @version      1.3
 // @description  Automatically clicks Call when Click2Calling from ELead CRM
 // @author       Dayton Rea
 // @match        www.eleadcrm.com/evo2/fresh/elead-v45/elead_track/ClickToCall/ProcessCall.aspx?Phone=*
