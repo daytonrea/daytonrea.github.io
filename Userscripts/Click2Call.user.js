@@ -6,6 +6,9 @@
 // @author       Dayton Rea
 // @match        www.eleadcrm.com/evo2/fresh/elead-v45/elead_track/ClickToCall/ProcessCall.aspx?Phone=*
 // @match        www.eleadcrm.com/evo2/fresh/eLead-V45/elead_track/ClickToCall/ProcessCall.aspx?Phone=*
+// @match        crm.connectcdk.com/evo2/fresh/elead-v45/elead_track/ClickToCall/ProcessCall.aspx?Phone=*
+// @match        www.crm.connectcdk.com/evo2/fresh/elead-v45/elead_track/ClickToCall/ProcessCall.aspx?Phone=*
+// @match        https://crm.connectcdk.com/evo2/fresh/elead-v45/elead_track/ClickToCall/ProcessCall.aspx?Phone=*
 // @downloadURL  https://daytonrea.com/Userscripts/Click2Call.user.js
 // @updateURL    https://daytonrea.com/Userscripts/Click2Call.user.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=eleadcrm.com
